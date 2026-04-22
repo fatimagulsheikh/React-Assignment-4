@@ -8,43 +8,83 @@
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  background: #f4f7fb;
 }
 
-/* Header */
+/* ===================== */
+/* 🌞 LIGHT MODE */
+/* ===================== */
+.light {
+  background-color: #ffffff;
+  color: #000;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* ===================== */
+/* 🌙 DARK MODE */
+/* ===================== */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
+}
+
+/* Light Header */
+.light .header {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
   color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Dark Header */
+.dark .header {
+  background: #1f1f1f;
+  color: white;
 }
 
 /* Logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
-/* Nav */
+/* ===================== */
+/* NAV LINKS */
+/* ===================== */
 .nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: white;
   font-size: 16px;
-  transition: 0.3s;
   position: relative;
+  transition: 0.3s;
 }
 
-/* Hover effect */
+/* Light Links */
+.light .nav a {
+  color: black;
+}
+
+/* Dark Links */
+.dark .nav a {
+  color: white;
+}
+
+/* Hover */
 .nav a:hover {
-  color: #000;
+  color: #00c6ff;
 }
 
-/* Underline animation */
+/* Underline Animation */
 .nav a::after {
   content: "";
   position: absolute;
@@ -52,7 +92,7 @@ body {
   height: 2px;
   left: 0;
   bottom: -5px;
-  background: black;
+  background: currentColor;
   transition: 0.3s;
 }
 
@@ -60,7 +100,28 @@ body {
   width: 100%;
 }
 
-/* Content */
+/* ===================== */
+/* CONTENT */
+/* ===================== */
 .content {
   padding: 40px;
+}
+
+/* ===================== */
+/* ICON */
+/* ===================== */
+.icon {
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+/* Icon colors */
+.light .icon {
+  color: black;
+}
+
+.dark .icon {
+  color: white;
 }
